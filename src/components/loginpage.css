@@ -1,0 +1,187 @@
+/* Add your styles for the login page here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.split-screen {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.login-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px; /* Increase spacing for better readability */
+  color: #333;
+}
+
+.login-header p {
+  font-size: 1rem;
+  margin-bottom: 25px; /* Add more spacing below the paragraph */
+  color: #555;
+}
+
+.login-form {
+  margin-top: 25px; /* Ensure consistent spacing above the form */
+}
+
+.user-type-selection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 70px; /* Increase spacing for better alignment */
+}
+
+.user-type-selection label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 50px; /* Reduced spacing for better compactness */
+  text-align: left;
+  position: relative; /* Ensure label and input are positioned correctly */
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  position: absolute; /* Position label above the input */
+  top: -10px; /* Adjust to prevent overlap */
+  left: 10px; /* Add horizontal padding for better alignment */
+  background: #fff; /* Add background to avoid overlap with input */
+  padding: 0 5px;
+  z-index: 1; /* Ensure label is above the input */
+  transition: all 0.2s ease; /* Smooth transition for label movement */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 12px; /* Add padding to prevent placeholder overlap */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative; /* Ensure input is below the label */
+  z-index: 0;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -20px; /* Move label above input when focused or filled */
+  font-size: 0.9rem; /* Reduce label size for better visibility */
+  color: #007bff; /* Highlight label color */
+}
+
+.password-container {
+  position: relative; /* Enable positioning of the toggle icon inside the field */
+  margin-bottom: 10px;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* Add padding to make space for the icon */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.toggle-password {
+  position: absolute; /* Position the icon inside the input field */
+  top: 50%; /* Center the icon vertically */
+  right: 10px; /* Align the icon to the right */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1rem; /* Adjust size for better visibility */
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 20px; /* Reduced spacing for better compactness */
+}
+
+.form-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 16px; /* Slightly increase padding for better clickability */
+  font-size: 1rem;
+  background: linear-gradient(90deg, #ff5722, #e91e63); /* Add gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg, #e91e63, #ff5722); /* Reverse gradient on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+@media (max-width: 768px) {
+  .split-screen {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    height: 50%;
+  }
+
+  .right-panel {
+    height: 50%;
+  }
+}

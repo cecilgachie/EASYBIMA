@@ -1,0 +1,184 @@
+  .date-picker-manager {
+    margin-bottom: 20px;
+  }
+
+  .family-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .family-section-title {
+    font-size: 18px;
+    color: #800000;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .family-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .add-family-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+
+  .add-family-btn:hover {
+    background-color: #e8e8e8;
+    border-color: #999;
+  }
+
+  .family-member-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .family-member-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .family-type-select,
+  .family-relation-select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .remove-family-btn {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #ffcdd2;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 0.2s ease;
+  }
+
+  .remove-family-btn:hover {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+  }
+
+  @media (max-width: 768px) {
+    .family-member-row {
+      flex-direction: column;
+      padding-bottom: 20px;
+      padding-top: 40px;
+    }
+    
+    .family-member-type {
+      width: 100%;
+    }
+    
+    .remove-family-btn {
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  .spouse-dob-section,
+  .children-dob-section {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+  }
+
+  .quote-form-group {
+    margin-bottom: 15px;
+  }
+
+  .quote-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .quote-form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  /* Improved styling for date of birth fields */
+  [name="dob"],
+  [name^="spouseDob"],
+  [name^="childDob"] {
+    font-weight: 500 !important;
+  }
+
+  /* Highlight DOB fields */
+  .dob-calendar input {
+    border-color: #882323 !important;
+  }
+
+  .dob-calendar input:focus {
+    box-shadow: 0 0 0 3px rgba(136, 35, 35, 0.2) !important;
+  }
+
+  /* Ensure DOB calendar appears in front of all elements */
+  .date-picker-manager .dob-calendar .react-datepicker-popper {
+    z-index: 9999 !important;
+  }
+
+  /* Transition effects for conditional fields */
+  .date-picker-manager .calendar-field {
+    transition: all 0.3s ease;
+    transform-origin: top;
+    animation: slide-down 0.3s ease forwards;
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Styling for the required indicator */
+  .children-dob-section .required {
+    color: #882323;
+    margin-left: 2px;
+  } 
