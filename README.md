@@ -1,74 +1,105 @@
-# EASYBIMA
-# CIC EasyBima Application
+# EasyBima Documentation
 
-This project includes the following pages:
-- **Cover Page**: A welcoming page for users.
-- **Login Page**: Allows users to log in.
-- **Forgot Password Page**: Helps users reset their password.
+## Project Overview
+EasyBima is a React-based web application built with TypeScript, providing a modern and user-friendly interface for CIC Group insurance-related operations.
 
-## Available Scripts
+## Technical Stack
+- **Frontend Framework**: React 18.2.0
+- **Language**: TypeScript
+- **Routing**: React Router DOM 6.22.0
+- **Database ORM**: Prisma
+- **Date Handling**: React Datepicker
+- **Data Visualization**: Chart.js
+- **Testing**: Jest and React Testing Library
 
-In the project directory, you can run:
+## Project Structure
+```
+easybima/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── services/      # API and business logic services
+│   ├── utils/         # Utility functions and helpers
+│   | assets/        # Static assets (images, fonts, etc.)
+│   ├── styles/        # CSS and styling files
+│   ├── data/          # Static data and configurations
+│   └── generated/     # Auto-generated files
+├── prisma/            # Database schema and migrations
+├── public/           # Public assets and index.html
+└── node_modules/     # Project dependencies
+```
 
-### `npm start`
+## Core Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Authentication System
+- User login functionality
+- Password recovery system
+- Secure session management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Main Pages
+- Cover Page: Welcome screen for users
+- Login Page: User authentication interface
+- Forgot Password Page: Password recovery workflow
 
-### `npm test`
+### 3. Data Visualization
+- Integration with Chart.js for data representation
+- Dynamic chart generation and updates
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Image Optimization
+The project includes built-in image optimization features:
+- JPEG and PNG compression
+- Image enhancement capabilities
+- Automated image processing scripts
 
-### `npm run build`
+## Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Getting Started
+1. Install dependencies:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run tests:
+```bash
+npm test
+```
 
-### `npm run eject`
+### Build Process
+To create a production build:
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Security Features
+- BCrypt integration for password hashing
+- JWT (JSON Web Tokens) for secure authentication
+- Type-safe database operations with Prisma
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Browser Support
+### Production
+- Browsers with >0.2% market share
+- Modern browsers
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Development
+- Latest versions of:
+  - Chrome
+  - Firefox
+  -edge
 
-## Learn More
+## Additional Tools
+- Image optimization utilities
+- TypeScript configuration
+- ESLint setup for code quality
+- Automated testing infrastructure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+This project is licensed under the ISC License.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Note: This documentation is a living document and will be updated as the project evolves.* 
